@@ -1,0 +1,94 @@
+@import 'variables.scss';
+
+body {
+    background-color: $secondaryColor;
+    .navbar {
+        background-color: $primaryColor;
+        position: fixed;
+        width: 100%;
+        z-index: 99;
+        color: $thirdColor;
+        top: 0;
+        box-shadow: 8px 8px 12px $secondaryColor;
+    }
+    .container {
+        margin-top: 110px;
+        .books {
+            text-align: center;
+            .thumbnail {
+                border: none;
+                text-align: center;
+                .centered {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 80%;
+                    transform: translate(-50%, -50%);
+                }
+                a{
+                    color: $thirdColor;
+                }
+            }
+        }
+        .arrow-icon {
+            cursor: pointer;
+            color: $thirdColor;
+            width: 20px;
+        }
+        .movie_title {
+            text-align: center;
+            font-size: 25px;
+            margin: 15px 0;
+            color: $thirdColor;
+        }
+        .movie_container {
+            display: flex;
+            .movie_img {
+                display: block;
+                width: 200px;
+                margin: 0;
+                img {
+                    border-radius: 4px;
+                }
+            }
+            .movie_infos {
+                color: $primaryColor;
+                padding-left: 40px;
+                text-align: left;
+            }
+            span {
+                color: $thirdColor;
+            }
+            a {
+                color: $primaryColor;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 650px) {
+        .container {
+            .movie_container {
+                flex-direction: column;
+                .movie_img {
+                    display: block;
+                    width: 100%;
+                    text-align: center;
+                    margin-bottom: 20px;
+                    img {
+                        border-radius: 4px;
+                    }
+                }
+                .movie_infos {
+                    color: $primaryColor;
+                    padding: 0;
+                    text-align: center;
+                    ul {
+                        list-style-type: none;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+}
